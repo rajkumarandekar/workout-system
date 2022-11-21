@@ -34,7 +34,10 @@ mongoose
   .then(() => {
     // listen for requests
 
-    console.log("connected to db & listening on port", process.env.PORT);
+    console.log(
+      "connected to db & listening on port",
+      process.env.PORT || 4001
+    );
   })
   .catch((error) => {
     console.log(error);
@@ -44,6 +47,7 @@ mongoose
 //  when u eventually push ur projects to github the envirimantal variables can remain hidden
 // they are not visible inthe code when comes to most sensitive information like datbase connection and authentation secret dont want those things visble
 //so, we seucre from .env file git ingore these file for .env acceess interminal so install npm dotenv
+
 app.listen(process.env.PORT || 4001, () => {
   console.log("Backend is background running");
 });
