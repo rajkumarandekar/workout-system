@@ -45,5 +45,5 @@ mongoose
 // they are not visible inthe code when comes to most sensitive information like datbase connection and authentation secret dont want those things visble
 //so, we seucre from .env file git ingore these file for .env acceess interminal so install npm dotenv
 app.listen(process.env.PORT || 4001, () => {
-  console.log("Backend is running");
+  console.log("Backend is background running");
 });
